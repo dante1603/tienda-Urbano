@@ -63,3 +63,5 @@ Set the GEMINI_API_KEY in .env.local to your Gemini API key (si aplica para func
 Run the app:
 
 npm run dev
+
+el dominio total de mundo!
