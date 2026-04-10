@@ -1,0 +1,25 @@
+name: Pipeline DevOps Basico
+
+# Aquí configuramos CUÁNDO se ejecuta la acción (Los triggers)
+on:
+  push:
+    branches:
+      - develop
+  pull_request:
+    branches:
+      - main
+
+# Aquí configuramos QUÉ va a hacer la acción
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar el codigo del repositorio
+        uses: actions/checkout@v3
+
+      - name: Prueba basica con Echo
+        # ¡Este es el famoso echo que mencionó el profe!
+        run: |
+          echo "¡El pipeline de DevOps se ejecutó correctamente!"
+          echo "Se detectó un cambio en develop o un PR hacia main."
